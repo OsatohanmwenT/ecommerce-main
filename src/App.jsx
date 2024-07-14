@@ -6,10 +6,10 @@ import ProductCount from "./components/ProductCount";
 import Navbar from "./components/Navbar";
 import Details from "./components/Details";
 import Overlay from "./components/OverLay";
-import image1 from "/images/image-product-1.jpg";
-import image2 from "/images/image-product-2.jpg";
-import image3 from "/images/image-product-3.jpg";
-import image4 from "/images/image-product-4.jpg";
+import image1 from "./images/image-product-1.jpg";
+import image2 from "./images/image-product-2.jpg";
+import image3 from "./images/image-product-3.jpg";
+import image4 from "./images/image-product-4.jpg";
 
 export default function App() {
   const [itemCount, setItemCount] = useState(0);
