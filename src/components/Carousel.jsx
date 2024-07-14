@@ -21,7 +21,7 @@ const Carousel = ({ images, currentIndex, handleThumbnailClick, handleNext, hand
             className={`mini ${index === currentIndex ? "active" : ""}`} // Apply 'active' class to the current thumbnail
             onClick={() => handleThumbnailClick(index)} // Update main image on thumbnail click
           >
-            <img className="product" src={image.replace('.jpg', '-thumbnail.jpg')} alt={`image-product-${index + 1}`} />
+            <img className="product" src={image.replace(".jpg", "-thumbnail.jpg")} alt={`image-product-${index + 1}`} />
             <div className="cover"></div>
           </picture>
         ))}
