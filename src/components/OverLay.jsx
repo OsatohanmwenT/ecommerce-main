@@ -3,7 +3,7 @@ import closeImg from "/images/icon-close.svg";
 import previousImg from "/images/icon-previous.svg";
 import nextImg from "/images/icon-next.svg";
 
-export default function Overlay({ images, currentIndex, handleThumbnailClick, handleNext, handlePrev, closeOverlay }) {
+export default function Overlay({ images, thumbnails, currentIndex, handleThumbnailClick, handleNext, handlePrev, closeOverlay }) {
     return(
         <div className="overlay-container">
             <button className="close-btn" onClick={closeOverlay}>
@@ -20,13 +20,13 @@ export default function Overlay({ images, currentIndex, handleThumbnailClick, ha
                     </button>
                 </picture>
                 <div className="images">
-                    {images.map((image, index) => (
+                    {thumbnails.map((thumbnail, index) => (
                         <picture
                             key={index} // Unique key for each thumbnail
                             className={`mini ${index === currentIndex ? "active" : ""}`} // Apply 'active' class to the current thumbnail
                             onClick={() => handleThumbnailClick(index)} // Update main image on thumbnail click
                         >
-                            <img className="product" src={image.replace(".jpg", "-thumbnail.jpg")} alt={`image-product-${index + 1}`} />
+                            <img className="product" src={thumbnail} alt={`image-product-${index + 1}`} />
                             <div className="cover"></div>
                         </picture>
                     ))}
