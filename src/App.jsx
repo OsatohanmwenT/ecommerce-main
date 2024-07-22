@@ -50,7 +50,7 @@ export default function App() {
   }
 
   function addToCart() {
-    setCartItems(prevCartItems => prevCartItems + itemCount);
+    setCartItems(prevCartItems => itemCount);
   }
 
   const handleThumbnailClick = (index) => {
